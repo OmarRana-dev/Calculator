@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.content {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.row input{
+    margin-bottom: 10px;
+    width: 408px;
+    height: 60px;
+    font-size: 22px;
+}
+.row {
+    margin: 5px;
+}
+.row-1 button{
+    width: 204px;
+}
+
+
+button {
+    width: 100px;
+    height: 60px;
+    font-size: larger;
+}

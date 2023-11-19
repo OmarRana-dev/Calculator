@@ -74,9 +74,9 @@ Array.from(buttons).forEach((button) => {
         operator = curentValue;
         updateDisplay(operator, value1, value2);
       }
-    } /*IN THIS SECTION WE MAKE USE ABLE DELETE BUTTON*/ else if (
-      curentValue === "DL"
-    ) {
+    }
+    /*IN THIS SECTION WE MAKE USE ABLE DELETE BUTTON*/ 
+    else if (curentValue === "DL") {
       if (typeof value2 === "string" && value2.length !== 0) {
         const myArray = value2.split("");
         myArray.pop();
@@ -93,7 +93,9 @@ Array.from(buttons).forEach((button) => {
         value1 = myArray.join("");
         updateDisplay(operator, value1, value2);
       }
-    } /*IN THIS SECTION WE PUT NUM VALUES*/ else {
+    }
+     /*IN THIS SECTION WE PUT NUM VALUES*/ 
+    else {
       // put value 1
       if (typeof operator === "string" && operator.length === 0) {
         value1 += curentValue;

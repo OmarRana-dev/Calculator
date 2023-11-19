@@ -27,33 +27,33 @@ function updateDisplay(operator, value1, value2) {
 let buttons = document.querySelectorAll("button");
 Array.from(buttons).forEach((button) => {
   button.addEventListener("click", (e) => {
-    curentValue = e.target.value;
+    currentValue = e.target.value;
     // console.log(e)
     // IN THIS FIRST SECTION WE PUT OPRETION SINE AND DO "ALLCLEAR" AND "EQUAL" TO VALUES
     if (
-      rademateOpr.includes(curentValue) ||
-      curentValue === "EQ" ||
-      curentValue === "AC"
+      rademateOpr.includes(currentValue) ||
+      currentValue === "EQ" ||
+      currentValue === "AC"
     ) {
       // sub section use for put opration sine in values
       if (
-        rademateOpr.includes(curentValue) &&
+        rademateOpr.includes(currentValue) &&
         !value2 &&
         typeof value1 === "string" &&
         value1.length !== 0
       ) {
-        operator = curentValue;
+        operator = currentValue;
         updateDisplay(operator, value1, value2);
       }
       // sub section use for "ALLCLEAR" key
-      else if (curentValue === "AC") {
+      else if (currentValue === "AC") {
         value1 = "";
         value2 = "";
         operator = "";
         updateDisplay(operator, value1, value2);
       }
       // sub section use for "Equal" values and give back resutl
-      else if (curentValue === "EQ") {
+      else if (currentValue === "EQ") {
         value1 = operate(operator, value1, value2).toString();
         value2 = "";
         operator = "";
@@ -71,12 +71,12 @@ Array.from(buttons).forEach((button) => {
         value1 = operate(operator, value1, value2).toString();
         value2 = "";
         operator = "";
-        operator = curentValue;
+        operator = currentValue;
         updateDisplay(operator, value1, value2);
       }
     }
     /*IN THIS SECTION WE MAKE USE ABLE DELETE BUTTON*/ 
-    else if (curentValue === "DL") {
+    else if (currentValue === "DL") {
       if (typeof value2 === "string" && value2.length !== 0) {
         const myArray = value2.split("");
         myArray.pop();
@@ -97,13 +97,15 @@ Array.from(buttons).forEach((button) => {
      /*IN THIS SECTION WE PUT NUM VALUES*/ 
     else {
       // put value 1
-      if (typeof operator === "string" && operator.length === 0) {
-        value1 += curentValue;
+      const decimalCheck1 = value1.includes(".")
+      const decimalCheck2 = value2.includes(".")
+      if (typeof operator === "string" && operator.length === 0 && decimalCheck1 === true && currentValue !== "." || decimalCheck1 === false) {
+        value1 += currentValue;
         updateDisplay(operator, value1, value2);
       }
       // put value 2
-      else if (typeof operator === "string" && operator.length !== 0) {
-        value2 += curentValue;
+      else if (typeof operator === "string" && operator.length !== 0 && decimalCheck2 === true && currentValue !== "." || decimalCheck2 === false && operator.length !== 0) {
+        value2 += currentValue;
         updateDisplay(operator, value1, value2);
       }
     }

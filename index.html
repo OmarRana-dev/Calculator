@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    <h1 class="text-center content">Welcome to Calculator</h1>
-    <div class="container content">
-        <div class="row">
-            <input type="text">
-        </div>
-        <div class="row row-1">
-            <button id="DL">DL</button>
-            <button id="AC">AC</button>
-        </div>
-        <div class="row row-2">
-            <button id="7">7</button>
-            <button id="8">8</button>
-            <button id="9">9</button>
-            <button id="/">÷</button>
-        </div>
-        <div class="row row-3">
-            <button id="4">4</button>
-            <button id="5">5</button>
-            <button id="6">6</button>
-            <button id="*">x</button>
-        </div>
-        <div class="row row-4">
-            <button id="1">1</button>
-            <button id="2">2</button>
-            <button id="3">3</button>
-            <button id="-">-</button>
-        </div>
-        <div class="row row-5">
-            <button id="0">0</button>
-            <button id=".">.</button>
-            <button id="=">=</button>
-            <button id="+">+</button>
-        </div>
-        <i>Made By Me! Omar Rana &#128512;</i>
-    </div>
+  </head>
+  <body>
 
-</body>
-</html>
+    <div id="container">
+      <div class="grid-items">
+        <div id="display"></div>
+        <button value="AC" class="uper-button">AC</button>
+        <button value="DL" class="uper-button">DL</button>
+        <button value="**" class="uper-button">^</button>
+        <button value="/" class="opretors">÷</button>
+        <button value="1" class="numbers">1</button>
+        <button value="2" class="numbers">2</button>
+        <button value="3" class="numbers">3</button>
+        <button value="*" class="opretors">x</button>
+        <button value="4" class="numbers">4</button>
+        <button value="5" class="numbers">5</button>
+        <button value="6" class="numbers">6</button>
+        <button value="+" class="opretors">+</button>
+        <button value="7" class="numbers">7</button>
+        <button value="8" class="numbers">8</button>
+        <button value="9" class="numbers">9</button>
+        <button value="-" class="opretors">-</button>
+        <button value="0" class="span-two numbers">0</button>
+        <button value="." class="numbers">.</button>
+        <button value="EQ" class="opretors">=</button>
+      </div>
+      <p>Made By Me! Omar Rana &#128512;</p>
+    </div>
+  </body>
+  </html>
